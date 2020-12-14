@@ -1,0 +1,241 @@
+$color-son: #6ad270;
+$color-selected: #F7CD77;
+$color-text: #86878A;
+
+
+
+.page-plans {
+    background-color: #fafafa;
+    font-family: 'Source Sans Pro', sans-serif;
+    min-height: 100vh;
+    height: auto;
+
+    h1 {
+        font-size: 1.9em;
+        color: $color-text;
+        font-weight: 400;
+        border-bottom: 1px solid #eeeeee;
+        padding-bottom: 5px;
+        margin: 30px 0;
+    }
+
+    p {
+        font-size: 1.4em;
+        font-weight: 300;
+        color: $color-text;
+    }
+
+    .plans-form {
+        margin-top: 0;
+
+
+
+        .row {
+            .form-group {
+                margin-bottom: 15px;
+
+                h2 {
+                    font-size: 1.6em;
+                    color: $color-text;
+                }
+
+                .form-control {
+                    font-size: 1em;
+                    font-weight: 400;
+                    border-color: #e6ebee;
+                    color: #9b9d9f;
+
+                    &.form-control-xl {
+                        height: calc(1.5em + 1rem + 15px);
+                        padding: 0.5rem 1rem;
+
+                        line-height: 1.5;
+                        border-radius: 0.3rem;
+                    }
+                }
+
+                //***********************************************
+                // custom checkbox
+                //***********************************************
+
+                .container-checkbox {
+                    .btn-group {
+
+                        &.btn-group {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: flex-start;
+                            flex-wrap: wrap;
+                            flex: 0;
+
+                            .btn-secondary {
+                                font-size: 1.05em;
+                                font-weight: 600;
+                                color: #ffffff;
+                                background-color: $color-son;
+                                border-color: $color-son;
+                                opacity: 0.4;
+                                padding: 5px 15px;
+                                border-radius: 7px;
+                                width: auto;
+                                min-height: 42px;
+                                height: auto;
+
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: center;
+                                flex-wrap: wrap;
+
+                                margin-bottom: 23px;
+                                margin-right: 30px;
+
+                                &:hover, &.focus, &.active {
+                                    border-color: $color-son;
+                                    background-color: $color-son;
+                                    opacity: 1;
+                                    box-shadow: none;
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+                .contents-selected {
+                    border-top: 1px solid #eee;
+                    padding-top: 20px;
+
+                    p {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: flex-start;
+                        flex-wrap: wrap;
+
+                        font-size: 1em;
+                        font-weight: 300;
+                        color: $color-text;
+                        margin-bottom: 7px;
+
+                        b {
+                            font-size: 1.05em;
+                            color: #888888;
+                            margin-right: 5px;
+                        }
+
+                        span {
+                            font-size: 1em;
+                            color: $color-selected;
+                            margin-left: 10px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 30px;
+
+            @media only screen and (min-width: 768px) {
+                flex-direction: row;
+            }
+
+
+            .btn-default {
+                background-color: #909090;
+                color: #ffffff;
+                text-transform: uppercase;
+                padding: 10px 13px;
+                font-size: 1.1em;
+            }
+
+            .checkbox {
+                label {
+                    margin-left: 10px;
+                    font-size: 1.2em;
+                    font-weight: 300;
+                    color: $color-text;
+
+                    a {
+                        color: $color-text;
+                    }
+                }
+            }
+        }
+    }
+
+
+    &.theme-dark {
+        background-color: #1c1c1c;
+
+        h1 {
+            color: #F6CA50;
+            border-bottom: 1px solid #4c4c4c;
+        }
+
+        .plans-form {
+            .row {
+                .form-group {
+
+                    //***********************************************
+                    // custom checkbox
+                    //***********************************************
+
+                    .container-checkbox {
+                        .btn-group {
+
+                            &.btn-group {
+
+                                .btn-secondary {
+                                    color: $color-text;
+                                    background-color: #303030;
+                                    border: 1px solid $color-text;
+                                    opacity: 0.4;
+
+                                    &:hover, &.focus, &.active {
+                                        background-color: #303030;
+                                        opacity: 1;
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .contents-selected {
+                        border-top: 1px solid #4c4c4c;
+                    }
+                }
+            }
+
+            .btn-container {
+                .btn-default {
+                    background-color: #F6CA50;
+                    border-color: #F6CA50;
+                    color: #1c1c1c;
+                }
+
+                .checkbox {
+                    label {
+                        margin-left: 10px;
+                        font-size: 1.2em;
+                        font-weight: 300;
+                        color: $color-text;
+
+                        a {
+                            color: $color-text;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

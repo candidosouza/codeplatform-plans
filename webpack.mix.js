@@ -6,6 +6,7 @@ mix
     .options({
         processCssUrls: false,
     })
+    .copy('./src/fonts', './public/statics/fonts')
     .copy('./src/img', './public/statics/img');
 
 
